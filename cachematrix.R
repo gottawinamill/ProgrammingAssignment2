@@ -5,6 +5,7 @@
 ## cacheSolve - this is a simple function which checks that a valid inverse is available in cache
 	## if so this is returned, otherwise it calls makeCacheMatrix to calculate the inverse, caches the value and returns  	
 
+## function to create cachable matrix object
 makeCacheMatrix <- function(x = matrix()) {
 	dig <- NULL ## variable which holds digest of matrix
 	inv <- NULL ## variable which holds inverse of matrix
@@ -40,7 +41,7 @@ makeCacheMatrix <- function(x = matrix()) {
 	
 }
 
-
+##function to calcualte matrix inverse and store / retrieve from cache
 cacheSolve <- function(x,...){
 	
 	## if any of the 3 following conditions are met then we need to recalculate both digest and matrix
