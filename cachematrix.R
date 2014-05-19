@@ -9,13 +9,16 @@ makeCacheMatrix <- function(x = matrix()) {
 	dig <- NULL ## variable which holds digest of matrix
 	inv <- NULL ## variable which holds inverse of matrix
 
+
+	## getter and setters for matrix object
 	 set <- function(y) {
                 x <<- y
                 inv <<- NULL
-		    dig <<- NULL
+		dig <<- NULL
         }
         get <- function() x 
 	
+	## getters and setters for digest
 	setDigest <- function(y){
 		library(digest)
 		dig <<- digest(y)
